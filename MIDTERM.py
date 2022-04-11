@@ -1,28 +1,25 @@
 from tkinter import *
 from tkinter import ttk
+window = Tk()
+
+def Myname():
+    txtfld['text'] = 'NAME'
 
 
-def frame_sentence():
-    name = name_me.get()
-
-    disp_tf.insert(0, f'{name}')
+window.geometry("500x250+10+20")
+window.title("Midterm in OOP")
 
 
-ws = Tk()
-ws.title('Midterms in OOP')
-ws.geometry('400x300')
+label = Label(window, text = "Enter your fullname:", fg = "purple")
+label.place(x=60, y=70)
 
-name_me = Entry(ws)
+button = Button(window, text = "Click to display your Fullname", fg = "green", command=Myname)
+button.place (x=60, y=145)
 
-name_lbl = Label(ws, text='Name', fg='red').place(x=265, y=65)
+txtfld = Entry(window, textvariable = 'NAME', bd = 5)
+txtfld.place(x=265, y=65)
 
-name_lbl.pack()
-name_me.pack()
+txtfld = Entry(window, text = 'FULLNAME', bd = 5)
+txtfld.place(x=265, y=145)
 
-btn = Button(ws, text='Frame Sentence', relief=SOLID, command=frame_sentence).place(x=70, y=60)
-btn.pack(pady=10)
-
-disp_tf = Entry(ws, width=11, font=('Arial', 14).place(x=265, y=154))
-disp_tf.pack(pady=5)
-
-ws.mainloop()
+window.mainloop()
