@@ -10,10 +10,10 @@ window.geometry("500x250+10+20")
 window.title("Midterm in OOP")
 
 
-label = Label(window, text = "Enter your fullname:", fg = "purple")
+label = Label(window, text = "Enter your fullname:", fg = "red")
 label.place(x=60, y=70)
 
-button = Button(window, text = "Click to display your Fullname", fg = "green", command=Myname)
+button = Button(window, text = "Click to display your Fullname", fg = "red", command=Myname)
 button.place (x=60, y=145)
 
 txtfld = Entry(window, textvariable = 'NAME', bd = 5)
